@@ -7,7 +7,7 @@
     "git-tag-versions": "bin.js"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "yargs": "^13.3.0",
     "git-ts": "^0.0.5",
     "nested-workspace-helper": "^0.2.9",
