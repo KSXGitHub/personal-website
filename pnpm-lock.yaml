@@ -5,7 +5,7 @@ devDependencies:
   standard: 13.1.0
   toolcheck: 0.0.5
   tslint: 5.18.0_typescript@3.5.3
-  tslint-config-standard: 8.0.1_tslint@5.18.0+typescript@3.5.3
+  tslint-config-standard: 9.0.0_tslint@5.18.0+typescript@3.5.3
   typescript: 3.5.3
 lockfileVersion: 5.1
 packages:
@@ -1594,11 +1594,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f/qGG2tUkrISBlQZEjEqoZ3B2+npJjIf04H1wuAv9iA8i04Icp+61KRXxFdha22670NJopsZCIjhC3SnjPRKrQ==
-  /tslib/1.9.3:
-    dev: true
-    resolution:
-      integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /tslint-config-standard/8.0.1_tslint@5.18.0+typescript@3.5.3:
+  /tslint-config-standard/9.0.0_tslint@5.18.0+typescript@3.5.3:
     dependencies:
       tslint-eslint-rules: 5.4.0_tslint@5.18.0+typescript@3.5.3
     dev: true
@@ -1606,13 +1602,13 @@ packages:
       tslint: '*'
       typescript: '*'
     resolution:
-      integrity: sha512-OWG+NblgjQlVuUS/Dmq3ax2v5QDZwRx4L0kEuDi7qFY9UI6RJhhNfoCV1qI4el8Fw1c5a5BTrjQJP0/jhGXY/Q==
+      integrity: sha512-CAw9J743RnPMemQV/XQ4YyNreC+A1NItACfkm+cBedrOkz6CQfwlnbKn8anUXBfoa4Zo4tjAhblRbsMNcSLfSw==
   /tslint-eslint-rules/5.4.0_tslint@5.18.0+typescript@3.5.3:
     dependencies:
       doctrine: 0.7.2
       tslib: 1.9.0
       tslint: 5.18.0_typescript@3.5.3
-      tsutils: 3.2.0_typescript@3.5.3
+      tsutils: 3.17.1_typescript@3.5.3
       typescript: 3.5.3
     dev: true
     peerDependencies:
@@ -1653,17 +1649,17 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  /tsutils/3.2.0_typescript@3.5.3:
+  /tsutils/3.17.1_typescript@3.5.3:
     dependencies:
-      tslib: 1.9.3
+      tslib: 1.10.0
       typescript: 3.5.3
     dev: true
     engines:
       node: '>= 6'
     peerDependencies:
-      typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev'
+      typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     resolution:
-      integrity: sha512-CvWEadl8VwlxOq6F3hfNbGrrRVSAjN2EPCEBgcbCUVDUxmwkV5254OGKsITNxDz8IGDQPAw7YJMtBHniHu2tbA==
+      integrity: sha512-kzeQ5B8H3w60nFY2g8cJIuH7JDpsALXySGtwGJ0p2LSjLgay3NdIpqq5SoOBe46bKDW2iq25irHCr8wjomUS2g==
   /type-check/0.3.2:
     dependencies:
       prelude-ls: 1.1.2
@@ -1742,5 +1738,5 @@ specifiers:
   standard: ^13.1.0
   toolcheck: ^0.0.5
   tslint: ^5.18.0
-  tslint-config-standard: ^8.0.1
+  tslint-config-standard: ^9.0.0
   typescript: ^3.5.3
