@@ -1,6 +1,6 @@
 dependencies:
   '@tools/places': 'link:../places'
-  exec-inline: 0.0.2
+  exec-inline: 0.0.5
   nested-workspace-helper: 0.2.9
   number-enum: 3.0.0
 lockfileVersion: 5.1
@@ -42,6 +42,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-2azXFP9n4aA2QNLkKm/F9pzKxgYj1SMawZ5Eh9iC21RH3XNcFsivLVU2NhpMgQm7YobSByvIol4c42ZFusXFHQ==
+  /@types/node/13.1.8:
+    dev: false
+    resolution:
+      integrity: sha512-6XzyyNM9EKQW4HKuzbo/CkOIjn/evtCmsU+MUM1xDfJ+3/rNjBttM1NgN7AOQvN6tP1Sl1D1PIKMreTArnxM9A==
   /@types/ramda/0.25.51:
     dev: false
     resolution:
@@ -178,6 +182,15 @@ packages:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-Y37NLc/InNSvORukAagfNmkXiqwgqixZDJFQ6xm0H2wruImOte9g3151nmjWS+WpzdSyFpDUoAZxpqNVZTKoUQ==
+  /exec-inline/0.0.5:
+    dependencies:
+      '@types/node': 13.1.8
+      tslib: 1.10.0
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-g7eEPrhCbkBJoYb8PG4aZeRXog1HYptBNNfwN1bRmzYWtu5dNQniqcmwClBhb6YWg3X/wrOnzmKJSPUbZYsKJg==
   /execa/1.0.0:
     dependencies:
       cross-spawn: 6.0.5
@@ -614,6 +627,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
+  /tslib/1.10.0:
+    dev: false
+    resolution:
+      integrity: sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
   /tslib/1.9.3:
     dev: false
     resolution:
@@ -721,6 +738,6 @@ packages:
       integrity: sha512-Lhz8TLaYnxq/2ObqHDql8dX8CJi97oHxrjUcYtzKbbykPtVW9WB+poxI+NM2UIzsMgNCZTIf0AQwsjK5yMAqZw==
 specifiers:
   '@tools/places': 'file:../places'
-  exec-inline: ^0.0.2
+  exec-inline: ^0.0.5
   nested-workspace-helper: ^0.2.9
   number-enum: ^3.0.0
