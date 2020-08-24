@@ -95,12 +95,22 @@ abstract class Dict {
 
   public readonly build = new Command(
     'Build all products',
-    async () => {
-      await this.callCmd('buildDocs')
-      await this.callCmd('buildMJS')
-      await this.callCmd('buildTypescript')
-      await this.callCmd('tripleSlashDirectives')
-      await this.callCmd('buildApp')
+    async args => {
+      const mayCall = async (command: CommandName) => {
+        const skipFlag = `--without:${command}`
+
+        if (args.includes(skipFlag)) {
+          console.info(`[${skipFlag}] Skip calling`, command)
+        } else {
+          await this.callCmd(command)
+        }
+      }
+
+      await mayCall('buildDocs')
+      await mayCall('buildMJS')
+      await mayCall('buildTypescript')
+      await mayCall('tripleSlashDirectives')
+      await mayCall('buildApp')
     },
   )
 
@@ -115,7 +125,7 @@ abstract class Dict {
   public readonly serve = new Command(
     'Build and serve main application',
     async () => {
-      await this.callCmd('build')
+      await this.callCmd('build', '--without:buildDocs', '--without:buildMJS', '--without:tripleSlashDirectives')
       await this.callCmd('serveApp')
     },
   )
