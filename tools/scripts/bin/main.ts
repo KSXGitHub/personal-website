@@ -300,7 +300,10 @@ abstract class Dict {
 
   public readonly buildApp = new Command(
     'Build main application',
-    args => this.callCmd('runAppScript', 'build', ...args),
+    async args => {
+      // await this.callCmd('buildTypescript')
+      await this.callCmd('runAppScript', 'build', ...args)
+    }
   )
 
   public readonly serveApp = new Command(
