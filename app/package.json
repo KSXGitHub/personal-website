@@ -21,8 +21,6 @@
     "ts-loader": "^8.0.3",
     "tslib": "^2.0.1",
     "@types/react-helmet": "^6.1.0",
-    "hello-world": "file:../packages/hello-world",
-    "@scope-name/scoped-hello-world": "file:../packages/scoped-hello-world",
     "@tools/places": "file:../tools/places"
   },
   "peerDependencies": {
