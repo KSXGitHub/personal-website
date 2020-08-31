@@ -4,13 +4,13 @@
   "description": "Components of the site",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/nodejs-monorepo-templates/typescript-monorepo-esm#readme",
+  "homepage": "https://github.com/KSXGitHub/personal-website#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nodejs-monorepo-templates/typescript-monorepo-esm.git"
+    "url": "git+https://github.com/KSXGitHub/personal-website.git"
   },
   "bugs": {
-    "url": "https://github.com/nodejs-monorepo-templates/typescript-monorepo-esm/issues"
+    "url": "https://github.com/KSXGitHub/personal-website/issues"
   },
   "main": "index.js",
   "module": "index.mjs",
