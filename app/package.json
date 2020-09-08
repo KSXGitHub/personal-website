@@ -21,6 +21,7 @@
     "ts-loader": "^8.0.3",
     "tslib": "^2.0.1",
     "@types/react-helmet": "^6.1.0",
+    "@khai-personal-website/components": "file:../packages/components",
     "@tools/places": "file:../tools/places"
   },
   "peerDependencies": {
