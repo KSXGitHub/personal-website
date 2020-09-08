@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import Main from '@khai-personal-website/components/Main'
 
 const title = "Khải's Profile"
 
@@ -9,9 +10,7 @@ const Home = () =>
       <meta charSet='UTF-8' />
       <title>{title}</title>
     </Helmet>
-    <main>
-      <h1>{title}</h1>
-    </main>
+    <Main title={title} />
   </>
 
 export default Home
