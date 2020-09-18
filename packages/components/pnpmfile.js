@@ -1,1 +1,2 @@
-module.exports = require('../../app/pnpmfile')
+const { readPackage } = require('../../tools/pnpmfile')
+exports.hooks = { readPackage }
