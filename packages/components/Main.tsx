@@ -31,7 +31,12 @@ export function Main(attr: MainAttr) {
     <AppBar position='static'>
       <Toolbar>
         <Typography className={classes.title} variant='h3'>{attr.title}</Typography>
-        <Button color='inherit' target='_blank' title='Source Code' href={attr.repository}>
+        <Button
+          color='inherit'
+          target='_blank'
+          title='Source Code'
+          href={attr.repository}
+        >
           <GitHubIcon />
         </Button>
       </Toolbar>
