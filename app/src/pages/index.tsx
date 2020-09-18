@@ -10,7 +10,7 @@ const Home = () =>
       <meta charSet='UTF-8' />
       <title>{title}</title>
     </Helmet>
-    <Main title={title} github='https://github.com/KSXGitHub/' />
+    <Main title={title} repository='https://github.com/KSXGitHub/personal-website.git' />
   </>
 
 export default Home

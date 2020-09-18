@@ -9,7 +9,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 export interface MainAttr {
   readonly title: string
-  readonly github: string
+  readonly repository: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -31,7 +31,7 @@ export function Main(attr: MainAttr) {
     <AppBar position='static'>
       <Toolbar>
         <Typography className={classes.title} variant='h3'>{attr.title}</Typography>
-        <Button color='inherit' target='_blank' href={attr.github}>
+        <Button color='inherit' target='_blank' href={attr.repository}>
           <GitHubIcon />
         </Button>
       </Toolbar>
