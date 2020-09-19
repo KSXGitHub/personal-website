@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import { Profile } from './Profile'
+import Profile from './Profile'
 
 export interface MainAttr {
   readonly title: string

@@ -45,3 +45,5 @@ export function Profile(attr: ProfileAttr) {
     </Container>
   </>
 }
+
+export default Profile
