@@ -13,6 +13,7 @@ export interface MainAttr {
   readonly repository: string
   readonly avatarSrc: string
   readonly avatarAlt: string
+  readonly fullName: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -48,6 +49,7 @@ export function Main(attr: MainAttr) {
       <Profile
         avatarAlt={attr.avatarAlt}
         avatarSrc={attr.avatarSrc}
+        fullName={attr.fullName}
       />
     </Container>
   </main>
