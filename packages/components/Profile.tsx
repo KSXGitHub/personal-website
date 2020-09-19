@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme =>
   createStyles({
     personalInformation: {
       display: 'flex',
+      justifyContent: 'space-around',
       marginTop: theme.spacing(2),
     },
     avatar: {
