@@ -14,6 +14,7 @@ export interface MainAttr {
   readonly avatarSrc: string
   readonly avatarAlt: string
   readonly fullName: string
+  readonly bioDescription: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -50,6 +51,7 @@ export function Main(attr: MainAttr) {
         avatarAlt={attr.avatarAlt}
         avatarSrc={attr.avatarSrc}
         fullName={attr.fullName}
+        bioDescription={attr.bioDescription}
       />
     </Container>
   </main>

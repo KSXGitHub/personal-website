@@ -10,6 +10,7 @@ export interface ProfileAttr {
   readonly avatarSrc: string
   readonly avatarAlt: string
   readonly fullName: string
+  readonly bioDescription: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -38,6 +39,7 @@ export function Profile(attr: ProfileAttr) {
       <Card>
         <CardContent>
           <Typography variant='h4'>{attr.fullName}</Typography>
+          <Typography>{attr.bioDescription}</Typography>
         </CardContent>
       </Card>
     </Container>
