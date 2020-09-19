@@ -6,10 +6,13 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import GitHubIcon from '@material-ui/icons/GitHub'
+import { Profile } from './Profile'
 
 export interface MainAttr {
   readonly title: string
   readonly repository: string
+  readonly avatarSrc: string
+  readonly avatarAlt: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -42,6 +45,10 @@ export function Main(attr: MainAttr) {
       </Toolbar>
     </AppBar>
     <Container>
+      <Profile
+        avatarAlt={attr.avatarAlt}
+        avatarSrc={attr.avatarSrc}
+      />
     </Container>
   </main>
 }
