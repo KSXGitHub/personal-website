@@ -15,6 +15,9 @@ export interface MainAttr {
   readonly avatarAlt: string
   readonly fullName: string
   readonly bioDescription: string
+  readonly githubUserHandle: string
+  readonly twitterUserHandle: string
+  readonly emailAddress: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -52,6 +55,9 @@ export function Main(attr: MainAttr) {
         avatarSrc={attr.avatarSrc}
         fullName={attr.fullName}
         bioDescription={attr.bioDescription}
+        githubUserHandle={attr.githubUserHandle}
+        twitterUserHandle={attr.twitterUserHandle}
+        emailAddress={attr.emailAddress}
       />
     </Container>
   </main>
