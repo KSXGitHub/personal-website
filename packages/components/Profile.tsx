@@ -43,7 +43,7 @@ export function Profile(attr: ProfileAttr) {
     ariaLabel,
     href,
   }: {
-    readonly Icon: (props: {}) => JSX.Element
+    readonly Icon: React.FunctionComponent
     readonly ariaLabel: string
     readonly href: string
   }) =>
