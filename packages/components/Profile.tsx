@@ -7,6 +7,10 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import IconButton from '@material-ui/core/IconButton'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import ExpandMore from '@material-ui/icons/ExpandMore'
 import GitHub from '@material-ui/icons/GitHub'
 import Twitter from '@material-ui/icons/Twitter'
 import Mail from '@material-ui/icons/Mail'
@@ -56,6 +60,26 @@ export function Profile(attr: ProfileAttr) {
       <Icon />
     </IconButton>
 
+  const Expandable = ({
+    title,
+    idPrefix,
+    children,
+  }: {
+    readonly title: string
+    readonly idPrefix: string
+    readonly children?: Iterable<JSX.Element> | JSX.Element | string
+  }) =>
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMore />}
+        aria-controls={`${idPrefix}-content`}
+        id={`${idPrefix}-content`}
+      >
+        <Typography variant='h5'>{title}</Typography>
+      </AccordionSummary>
+      <AccordionDetails>{children}</AccordionDetails>
+    </Accordion>
+
   return <>
     <Container className={classes.personalInformation}>
       <Avatar
@@ -86,6 +110,11 @@ export function Profile(attr: ProfileAttr) {
           </ButtonGroup>
         </CardContent>
       </Card>
+    </Container>
+    <Container>
+      <Expandable title='Programming Languages' idPrefix='programming-languages'>
+        TypeScript Rust
+      </Expandable>
     </Container>
   </>
 }
