@@ -14,6 +14,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 import GitHub from '@material-ui/icons/GitHub'
 import Twitter from '@material-ui/icons/Twitter'
 import Mail from '@material-ui/icons/Mail'
+import { Child } from '@khai-personal-website/utility-types'
 
 export interface ProfileAttr {
   readonly avatarSrc: string
@@ -67,7 +68,7 @@ export function Profile(attr: ProfileAttr) {
   }: {
     readonly title: string
     readonly idPrefix: string
-    readonly children?: Iterable<JSX.Element> | JSX.Element | string
+    readonly children?: Child
   }) =>
     <Accordion>
       <AccordionSummary
