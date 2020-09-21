@@ -1,0 +1,27 @@
+{
+  "name": "@khai-personal-website/utility-types",
+  "version": "0.0.0",
+  "description": "Utility types used by the site",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/KSXGitHub/personal-website#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KSXGitHub/personal-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KSXGitHub/personal-website/issues"
+  },
+  "main": "index.js",
+  "module": "index.mjs",
+  "browser": "index.mjs",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.0.1",
+    "@types/node": "^14.6.4"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "@types/react": "^16.9.49"
+  }
+}
