@@ -9,7 +9,7 @@ const Home = () =>
     <Helmet>
       <meta charSet='UTF-8' />
       <title>{title}</title>
-      <html lang='en-GB' />
+      <html lang='en' />
     </Helmet>
     <Main
       title={title}
