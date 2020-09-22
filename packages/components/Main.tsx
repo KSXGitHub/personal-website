@@ -14,7 +14,9 @@ export interface MainAttr {
   readonly avatarSrc: string
   readonly avatarAlt: string
   readonly fullName: string
+  readonly fullNameLang?: string
   readonly bioDescription: string
+  readonly bioDescriptionLang?: string
   readonly githubUserHandle: string
   readonly twitterUserHandle: string
   readonly emailAddress: string
@@ -54,7 +56,9 @@ export function Main(attr: MainAttr) {
         avatarAlt={attr.avatarAlt}
         avatarSrc={attr.avatarSrc}
         fullName={attr.fullName}
+        fullNameLang={attr.fullNameLang}
         bioDescription={attr.bioDescription}
+        bioDescriptionLang={attr.bioDescriptionLang}
         githubUserHandle={attr.githubUserHandle}
         twitterUserHandle={attr.twitterUserHandle}
         emailAddress={attr.emailAddress}
