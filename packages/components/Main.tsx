@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import GitHubIcon from '@material-ui/icons/GitHub'
+import { Child } from '@khai-personal-website/utility-types'
 import Profile from './Profile'
 
 export interface MainAttr {
@@ -13,10 +14,8 @@ export interface MainAttr {
   readonly repository: string
   readonly avatarSrc: string
   readonly avatarAlt: string
-  readonly fullName: string
-  readonly fullNameLang?: string
-  readonly bioDescription: string
-  readonly bioDescriptionLang?: string
+  readonly fullName: Child
+  readonly bioDescription: Child
   readonly githubUserHandle: string
   readonly twitterUserHandle: string
   readonly emailAddress: string
@@ -56,9 +55,7 @@ export function Main(attr: MainAttr) {
         avatarAlt={attr.avatarAlt}
         avatarSrc={attr.avatarSrc}
         fullName={attr.fullName}
-        fullNameLang={attr.fullNameLang}
         bioDescription={attr.bioDescription}
-        bioDescriptionLang={attr.bioDescriptionLang}
         githubUserHandle={attr.githubUserHandle}
         twitterUserHandle={attr.twitterUserHandle}
         emailAddress={attr.emailAddress}

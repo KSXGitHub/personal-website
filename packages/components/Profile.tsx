@@ -19,10 +19,8 @@ import { Child } from '@khai-personal-website/utility-types'
 export interface ProfileAttr {
   readonly avatarSrc: string
   readonly avatarAlt: string
-  readonly fullName: string
-  readonly fullNameLang?: string
-  readonly bioDescription: string
-  readonly bioDescriptionLang?: string
+  readonly fullName: Child
+  readonly bioDescription: Child
   readonly githubUserHandle: string
   readonly twitterUserHandle: string
   readonly emailAddress: string
@@ -92,8 +90,8 @@ export function Profile(attr: ProfileAttr) {
       />
       <Card>
         <CardContent>
-          <Typography variant='h4' lang={attr.fullNameLang}>{attr.fullName}</Typography>
-          <Typography lang={attr.bioDescriptionLang}>{attr.bioDescription}</Typography>
+          <Typography variant='h4'>{attr.fullName}</Typography>
+          <Typography>{attr.bioDescription}</Typography>
           <ButtonGroup>
             <ExContactLink
               Icon={GitHub}
