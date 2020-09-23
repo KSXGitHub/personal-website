@@ -57,6 +57,7 @@ export function Profile(attr: ProfileAttr) {
       aria-label={ariaLabel}
       href={href}
       target='_blank'
+      rel='noopener'
     >
       <Icon />
     </IconButton>

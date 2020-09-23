@@ -45,6 +45,7 @@ export function Main(attr: MainAttr) {
           target='_blank'
           title='Source Code'
           href={attr.repository}
+          rel='noopener'
         >
           <GitHubIcon />
         </IconButton>
