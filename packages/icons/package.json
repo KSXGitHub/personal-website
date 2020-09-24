@@ -1,7 +1,7 @@
 {
-  "name": "@khai-personal-website/components",
+  "name": "@khai-personal-website/icons",
   "version": "0.0.0",
-  "description": "Components of the site",
+  "description": "Collections of SVG icons",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/KSXGitHub/personal-website#readme",
@@ -17,11 +17,7 @@
   "browser": "index.mjs",
   "sideEffects": false,
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
     "tslib": "^2.0.1",
-    "@khai-personal-website/utility-types": "^0.0.0",
-    "@khai-personal-website/icons": "^0.0.0",
     "@types/node": "^14.6.4"
   },
   "peerDependencies": {
