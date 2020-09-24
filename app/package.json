@@ -23,6 +23,7 @@
     "tslib": "^2.0.1",
     "@types/react-helmet": "^6.1.0",
     "@khai-personal-website/components": "file:../packages/components",
+    "@khai-personal-website/icons": "file:../packages/icons",
     "@tools/places": "file:../tools/places"
   },
   "peerDependencies": {

@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import { Child } from '@khai-personal-website/utility-types'
 import Profile from './Profile'
+import { ProgrammingLanguageListData } from './ProgrammingLanguageList'
 
 export interface MainAttr {
   readonly title: string
@@ -19,6 +20,7 @@ export interface MainAttr {
   readonly githubUserHandle: string
   readonly twitterUserHandle: string
   readonly emailAddress: string
+  readonly programmingLanguages: readonly ProgrammingLanguageListData[]
 }
 
 const useStyles = makeStyles(theme =>
@@ -60,6 +62,7 @@ export function Main(attr: MainAttr) {
         githubUserHandle={attr.githubUserHandle}
         twitterUserHandle={attr.twitterUserHandle}
         emailAddress={attr.emailAddress}
+        programmingLanguages={attr.programmingLanguages}
       />
     </Container>
   </main>

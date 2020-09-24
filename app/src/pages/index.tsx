@@ -1,6 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Main from '@khai-personal-website/components/Main'
+import Rust from '@khai-personal-website/icons/Rust'
+import TypeScript from '@khai-personal-website/icons/TypeScript'
+import JavaScript from '@khai-personal-website/icons/JavaScript'
 
 const title = "Khải's Profile"
 
@@ -23,6 +26,11 @@ const Home = () =>
       githubUserHandle='KSXGitHub'
       twitterUserHandle='hvksmr1996'
       emailAddress='hvksmr1996@gmail.com'
+      programmingLanguages={[
+        { Icon: Rust, langName: 'Rust' },
+        { Icon: TypeScript, langName: 'TypeScript' },
+        { Icon: JavaScript, langName: 'JavaScript' },
+      ]}
     />
   </>
 

@@ -10,19 +10,12 @@ import IconButton from '@material-ui/core/IconButton'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import Link from '@material-ui/core/Link'
-import Icon from '@material-ui/core/Icon'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import GitHub from '@material-ui/icons/GitHub'
 import Twitter from '@material-ui/icons/Twitter'
 import Mail from '@material-ui/icons/Mail'
 import { Child } from '@khai-personal-website/utility-types'
-import Rust from '@khai-personal-website/icons/Rust'
-import TypeScript from '@khai-personal-website/icons/TypeScript'
-import JavaScript from '@khai-personal-website/icons/JavaScript'
+import { ProgrammingLanguageList, ProgrammingLanguageListData } from './ProgrammingLanguageList'
 
 export interface ProfileAttr {
   readonly avatarSrc: string
@@ -32,6 +25,7 @@ export interface ProfileAttr {
   readonly githubUserHandle: string
   readonly twitterUserHandle: string
   readonly emailAddress: string
+  readonly programmingLanguages: readonly ProgrammingLanguageListData[]
 }
 
 const useStyles = makeStyles(theme =>
@@ -94,27 +88,6 @@ export function Profile(attr: ProfileAttr) {
       <AccordionDetails>{children}</AccordionDetails>
     </Accordion>
 
-  const GhLangLink = ({
-    Icon: IconContent,
-    langName,
-    langId = langName.toLowerCase(),
-  }: {
-    Icon: () => JSX.Element
-    langName: string
-    langId?: string
-  }) =>
-    <ListItem>
-      <Link
-        href={`https://github.com/${attr.githubUserHandle}?tab=repositories&q=&type=source&language=${langId}`}
-        target='_blank'
-        rel='noopener'
-        className={classes.listItem}
-      >
-        <ListItemIcon><Icon><IconContent /></Icon></ListItemIcon>
-        <Typography>{langName}</Typography>
-      </Link>
-    </ListItem>
-
   return <>
     <Container className={classes.personalInformation}>
       <Avatar
@@ -148,11 +121,9 @@ export function Profile(attr: ProfileAttr) {
     </Container>
     <Container>
       <Expandable title='Programming Languages' idPrefix='programming-languages'>
-        <List>
-          <GhLangLink Icon={Rust} langName='Rust' />
-          <GhLangLink Icon={TypeScript} langName='TypeScript' />
-          <GhLangLink Icon={JavaScript} langName='JavaScript' />
-        </List>
+        <ProgrammingLanguageList githubUserHandle={attr.githubUserHandle}>
+          {attr.programmingLanguages}
+        </ProgrammingLanguageList>
       </Expandable>
     </Container>
   </>
