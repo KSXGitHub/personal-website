@@ -121,9 +121,10 @@ export function Profile(attr: ProfileAttr) {
     </Container>
     <Container>
       <Expandable title='Programming Languages' idPrefix='programming-languages'>
-        <ProgrammingLanguageList githubUserHandle={attr.githubUserHandle}>
-          {attr.programmingLanguages}
-        </ProgrammingLanguageList>
+        <ProgrammingLanguageList
+          githubUserHandle={attr.githubUserHandle}
+          data={attr.programmingLanguages}
+        />
       </Expandable>
     </Container>
   </>

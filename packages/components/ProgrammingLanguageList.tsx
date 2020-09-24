@@ -15,7 +15,7 @@ export interface ProgrammingLanguageListData {
 
 export interface ProgrammingLanguageListAttr {
   readonly githubUserHandle: string
-  readonly children: readonly ProgrammingLanguageListData[]
+  readonly data: readonly ProgrammingLanguageListData[]
 }
 
 const useStyles = makeStyles(theme =>
@@ -51,7 +51,7 @@ export function ProgrammingLanguageList(attr: ProgrammingLanguageListAttr) {
       </Link>
     </ListItem>
 
-  const children = attr.children.map((attr, index) => <GhLangLink key={index} {...attr} />)
+  const children = attr.data.map((attr, index) => <GhLangLink key={index} {...attr} />)
 
   return <List>{children}</List>
 }
