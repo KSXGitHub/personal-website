@@ -47,7 +47,7 @@ export function ProgrammingLanguageList(attr: ProgrammingLanguageListAttr) {
         className={classes.listItem}
       >
         <ListItemIcon><Icon><IconContent /></Icon></ListItemIcon>
-        <Typography>{langName}</Typography>
+        <Typography variant='inherit'>{langName}</Typography>
       </Link>
     </ListItem>
 
