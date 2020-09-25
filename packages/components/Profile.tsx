@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
 import IconButton from '@material-ui/core/IconButton'
+import Grid from '@material-ui/core/Grid'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
@@ -34,6 +35,7 @@ const useStyles = makeStyles(theme =>
       display: 'flex',
       justifyContent: 'space-around',
       marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
     },
     avatar: {
       width: theme.spacing(25),
@@ -120,12 +122,19 @@ export function Profile(attr: ProfileAttr) {
       </Card>
     </Container>
     <Container>
-      <Expandable title='Most used programming languages' idPrefix='programming-languages'>
-        <ProgrammingLanguageList
-          githubUserHandle={attr.githubUserHandle}
-          data={attr.programmingLanguages}
-        />
-      </Expandable>
+      <Grid
+        direction='column'
+        justify='center'
+        alignItems='center'
+        spacing={2}
+      >
+        <Expandable title='Most used programming languages' idPrefix='programming-languages'>
+          <ProgrammingLanguageList
+            githubUserHandle={attr.githubUserHandle}
+            data={attr.programmingLanguages}
+          />
+        </Expandable>
+      </Grid>
     </Container>
   </>
 }
