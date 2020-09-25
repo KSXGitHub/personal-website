@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
-import Container from '@material-ui/core/Container'
 import Avatar from '@material-ui/core/Avatar'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -88,7 +87,7 @@ export function Profile(attr: ProfileAttr) {
       <AccordionDetails>{children}</AccordionDetails>
     </Accordion>
 
-  return <Grid direction='column'>
+  return <Grid direction='column' spacing={2}>
     <Card>
       <CardContent>
         <Grid className={classes.personalInformation} direction='column' container>
@@ -123,21 +122,19 @@ export function Profile(attr: ProfileAttr) {
         </Grid>
       </CardContent>
     </Card>
-    <Container>
-      <Grid
-        direction='column'
-        justify='center'
-        alignItems='center'
-        spacing={2}
-      >
-        <Expandable title='Most used programming languages' idPrefix='programming-languages'>
-          <ProgrammingLanguageList
-            githubUserHandle={attr.githubUserHandle}
-            data={attr.programmingLanguages}
-          />
-        </Expandable>
-      </Grid>
-    </Container>
+    <Grid
+      direction='column'
+      justify='center'
+      alignItems='center'
+      spacing={2}
+    >
+      <Expandable title='Most used programming languages' idPrefix='programming-languages'>
+        <ProgrammingLanguageList
+          githubUserHandle={attr.githubUserHandle}
+          data={attr.programmingLanguages}
+        />
+      </Expandable>
+    </Grid>
   </Grid>
 }
 
