@@ -120,7 +120,7 @@ export function Profile(attr: ProfileAttr) {
       </Card>
     </Container>
     <Container>
-      <Expandable title='Programming Languages' idPrefix='programming-languages'>
+      <Expandable title='Most used programming languages' idPrefix='programming-languages'>
         <ProgrammingLanguageList
           githubUserHandle={attr.githubUserHandle}
           data={attr.programmingLanguages}
