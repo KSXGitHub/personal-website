@@ -90,37 +90,41 @@ export function Profile(attr: ProfileAttr) {
       <AccordionDetails>{children}</AccordionDetails>
     </Accordion>
 
-  return <>
-    <Container className={classes.personalInformation}>
-      <Avatar
-        className={classes.avatar}
-        alt={attr.avatarAlt}
-        src={attr.avatarSrc}
-      />
-      <Card>
-        <CardContent>
-          <Typography variant='h4'>{attr.fullName}</Typography>
+  return <Grid direction='column'>
+    <Card>
+      <CardContent>
+        <Grid className={classes.personalInformation} direction='column' container>
+          <Grid direction='row' container alignItems='flex-end'>
+            <Avatar
+              className={classes.avatar}
+              alt={attr.avatarAlt}
+              src={attr.avatarSrc}
+            />
+            <Grid direction='column'>
+              <Typography variant='h4'>{attr.fullName}</Typography>
+              <ButtonGroup>
+                <ExContactLink
+                  Icon={GitHub}
+                  ariaLabel='github profile'
+                  href={`https://github.com/${attr.githubUserHandle}`}
+                />
+                <ExContactLink
+                  Icon={Twitter}
+                  ariaLabel='twitter profile'
+                  href={`https://twitter.com/${attr.twitterUserHandle}`}
+                />
+                <ExContactLink
+                  Icon={Mail}
+                  ariaLabel='e-mail'
+                  href={`mailto:hvksmr1996@gmail.com`}
+                />
+              </ButtonGroup>
+            </Grid>
+          </Grid>
           <Typography>{attr.bioDescription}</Typography>
-          <ButtonGroup>
-            <ExContactLink
-              Icon={GitHub}
-              ariaLabel='github profile'
-              href={`https://github.com/${attr.githubUserHandle}`}
-            />
-            <ExContactLink
-              Icon={Twitter}
-              ariaLabel='twitter profile'
-              href={`https://twitter.com/${attr.twitterUserHandle}`}
-            />
-            <ExContactLink
-              Icon={Mail}
-              ariaLabel='e-mail'
-              href={`mailto:hvksmr1996@gmail.com`}
-            />
-          </ButtonGroup>
-        </CardContent>
-      </Card>
-    </Container>
+        </Grid>
+      </CardContent>
+    </Card>
     <Container>
       <Grid
         direction='column'
@@ -136,7 +140,7 @@ export function Profile(attr: ProfileAttr) {
         </Expandable>
       </Grid>
     </Container>
-  </>
+  </Grid>
 }
 
 export default Profile
