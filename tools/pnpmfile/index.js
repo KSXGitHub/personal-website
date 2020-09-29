@@ -18,8 +18,8 @@
  * @param {PkgJson} pkgJson Target `package.json`
  * @param {string | (name: string) => boolean} pattern Name or pattern of target dependency
  */
-function moveProdToPeer(pkgJson, pattern) {
-  if (!pkgJson.dependencies) return false
+function* moveProdToPeer(pkgJson, pattern) {
+  if (!pkgJson.dependencies) return
 
   /**
    * @param {string} name
@@ -36,19 +36,18 @@ function moveProdToPeer(pkgJson, pattern) {
     case 'string': {
       if (pattern in pkgJson.dependencies) {
         act(pattern)
-        return true
+        yield pattern
       }
-      return false
+      return
     }
     case 'function': {
-      let count = 0
       for (const name in pkgJson.dependencies) {
         if (pattern(name)) {
           act(pattern)
-          count += 1
+          yield name
         }
       }
-      return count
+      return
     }
   }
 }
@@ -60,8 +59,8 @@ function moveProdToPeer(pkgJson, pattern) {
  * @param {Ctx} ctx Context object
  */
 function moveProdToPeerLog(pkg, pattern, ctx) {
-  if (moveProdToPeer(pkg, pattern)) {
-    ctx.log(`Made ${pattern} of ${pkg.name} a peer dependency`)
+  for (const name of moveProdToPeer(pkg, pattern)) {
+    ctx.log(`Made ${name} of ${pkg.name} a peer dependency`)
   }
 }
 
