@@ -72,6 +72,7 @@ function readPackage(pkg, ctx) {
   moveProdToPeerLog(pkg, 'react', ctx)
   moveProdToPeerLog(pkg, 'react-dom', ctx)
   moveProdToPeerLog(pkg, '@types/react', ctx)
+  moveProdToPeerLog(pkg, name => name.startsWith('@material-ui/'), ctx)
   return pkg
 }
 
