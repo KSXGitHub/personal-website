@@ -1,7 +1,6 @@
 export const cleanTypescriptBuild = require.resolve('@tools/clean-typescript-build/bin')
 export const jest = require.resolve('@tools/jest/bin')
 export const createNewFolder = require.resolve('@tools/create-new-folder/bin')
-export const docs = require.resolve('@tools/docs/bin')
 export const gitTagVersions = require.resolve('@tools/git-tag-versions/bin')
 export const makeMJS = require.resolve('@tools/make-mjs/bin')
 export const publishWebPages = require.resolve('@tools/publish-web-pages/bin')
