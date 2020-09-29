@@ -12,6 +12,7 @@ dependencies:
   gatsby: 2.24.65_gatsby@2.24.65
   gatsby-legacy-polyfills: 0.0.5
   gatsby-link: 2.4.14_@reach+router@1.3.4
+  gatsby-plugin-material-ui: 2.1.10_gatsby@2.24.65
   gatsby-plugin-react-helmet: 3.3.11_e96b0fbe44c2bba1735f5b956340461b
   gatsby-plugin-typescript: 2.4.20_gatsby@2.24.65
   gatsby-react-router-scroll: 3.0.13_@reach+router@1.3.4
@@ -3401,6 +3402,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg==
+  /clean-css/4.2.3:
+    dependencies:
+      source-map: 0.6.1
+    dev: false
+    engines:
+      node: '>= 4.0'
+    resolution:
+      integrity: sha512-VcMWDN54ZN/DS+g58HYL5/n4Zrqe8vHJpGA8KdgUXFU4fuP/aHNw8eld9SyEIyabIMJX/0RaY/fplOo5hYLSFA==
   /clean-stack/2.2.0:
     dev: false
     engines:
@@ -5878,6 +5887,18 @@ packages:
       node: '>=10.13.0'
     resolution:
       integrity: sha512-0npo/wjYO94nqcjl0aMkL65LvJuVnaieJzlxpA6Fdj2s90RjKI0mCj/3VPvRBz3p0aDp5+gas4kUa5KE4B3b0Q==
+  /gatsby-plugin-material-ui/2.1.10_gatsby@2.24.65:
+    dependencies:
+      autoprefixer: 9.8.6
+      clean-css: 4.2.3
+      gatsby: 2.24.65_gatsby@2.24.65
+      postcss: 7.0.34
+    dev: false
+    peerDependencies:
+      '@material-ui/styles': '>=4.0.0'
+      gatsby: '>=2.0.33'
+    resolution:
+      integrity: sha512-jyQvyTyy10LMHQU075azLj77u7AjCNLNmghMuza6aafmG4cZYGvzY6tJ+ebgg6l+WFDlR0JdOzf+gvBxIElD9w==
   /gatsby-plugin-page-creator/2.3.28_gatsby@2.24.65:
     dependencies:
       '@babel/traverse': 7.11.5
@@ -13114,6 +13135,7 @@ specifiers:
   gatsby: ^2.24.65
   gatsby-legacy-polyfills: ^0.0.5
   gatsby-link: ^2.4.14
+  gatsby-plugin-material-ui: ^2.1.10
   gatsby-plugin-react-helmet: ^3.3.11
   gatsby-plugin-typescript: ^2.4.20
   gatsby-react-router-scroll: ^3.0.13

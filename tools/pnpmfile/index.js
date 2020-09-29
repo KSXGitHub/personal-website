@@ -16,31 +16,49 @@
 /**
  * Move a dependency (if exist) from `[dependencies]` to `[peerDependencies]`
  * @param {PkgJson} pkgJson Target `package.json`
- * @param {string} name Name of target dependency
+ * @param {string | (name: string) => boolean} pattern Name or pattern of target dependency
  */
-function moveProdToPeer(pkgJson, name) {
-  if (!pkgJson.dependencies) return false
+function* moveProdToPeer(pkgJson, pattern) {
+  if (!pkgJson.dependencies) return
 
-  if (name in pkgJson.dependencies) {
+  /**
+   * @param {string} name
+   */
+  function act(name) {
     if (!pkgJson.peerDependencies) {
       pkgJson.peerDependencies = {}
     }
     pkgJson.peerDependencies[name] = pkgJson.dependencies[name]
     delete pkgJson.dependencies[name]
-    return true
   }
 
-  return false
+  switch (typeof pattern) {
+    case 'string':
+      if (pattern in pkgJson.dependencies) {
+        act(pattern)
+        yield pattern
+      }
+      return
+
+    case 'function':
+      for (const name in pkgJson.dependencies) {
+        if (pattern(name)) {
+          act(pattern)
+          yield name
+        }
+      }
+      return
+  }
 }
 
 /**
  * If a dependency named `name` exists in `pkg.dependencies`, move it to `pkg.peerDependencies` and log
  * @param {PkgJson} pkg Target package
- * @param {string} name Dependency name
+ * @param {string | (name: string) => boolean} pattern Dependency name
  * @param {Ctx} ctx Context object
  */
-function moveProdToPeerLog(pkg, name, ctx) {
-  if (moveProdToPeer(pkg, name)) {
+function moveProdToPeerLog(pkg, pattern, ctx) {
+  for (const name of moveProdToPeer(pkg, pattern)) {
     ctx.log(`Made ${name} of ${pkg.name} a peer dependency`)
   }
 }
@@ -54,6 +72,7 @@ function readPackage(pkg, ctx) {
   moveProdToPeerLog(pkg, 'react', ctx)
   moveProdToPeerLog(pkg, 'react-dom', ctx)
   moveProdToPeerLog(pkg, '@types/react', ctx)
+  moveProdToPeerLog(pkg, name => name.startsWith('@material-ui/'), ctx)
   return pkg
 }
 
