@@ -1,0 +1,18 @@
+import React from 'react'
+import { Child } from '@khai-personal-website/utility-types'
+
+export interface VerticalHeadingTableAttr {
+  readonly data: Record<string, Child>
+}
+
+export const VerticalHeadingTable = (attr: VerticalHeadingTableAttr) =>
+  <table>
+    {Object.entries(attr.data).map(([title, content], key) =>
+      <tr key={key}>
+        <th>{title}</th>
+        <td>{content}</td>
+      </tr>
+    )}
+  </table>
+
+export default VerticalHeadingTable
