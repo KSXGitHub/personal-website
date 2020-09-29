@@ -96,7 +96,6 @@ abstract class Dict {
   public readonly build = new Command(
     'Build all products',
     async () => {
-      await this.callCmd('buildDocs')
       await this.callCmd('buildMJS')
       await this.callCmd('buildTypescript')
       await this.callCmd('buildApp')
@@ -211,14 +210,6 @@ abstract class Dict {
     ),
   )
 
-  public readonly buildDocs = new Command(
-    'Generate documentation from jsdoc comments',
-    async () => {
-      const { main } = await import('@tools/docs')
-      await main()
-    },
-  )
-
   public readonly cleanTypescriptBuild = new Command(
     'Clean TSC build products',
     this.mkspawn(commands.cleanTypescriptBuild),
@@ -291,7 +282,6 @@ abstract class Dict {
     'Rebuild and publish documentation to gh-pages',
     async () => {
       await this.callCmd('cleanDocs')
-      await this.callCmd('buildDocs')
       await this.callCmd('publishWebPages')
     },
   )
