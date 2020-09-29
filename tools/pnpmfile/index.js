@@ -33,14 +33,14 @@ function* moveProdToPeer(pkgJson, pattern) {
   }
 
   switch (typeof pattern) {
-    case 'string': {
+    case 'string':
       if (pattern in pkgJson.dependencies) {
         act(pattern)
         yield pattern
       }
       return
-    }
-    case 'function': {
+
+    case 'function':
       for (const name in pkgJson.dependencies) {
         if (pattern(name)) {
           act(pattern)
@@ -48,7 +48,6 @@ function* moveProdToPeer(pkgJson, pattern) {
         }
       }
       return
-    }
   }
 }
 
