@@ -16,6 +16,7 @@ import Twitter from '@material-ui/icons/Twitter'
 import Mail from '@material-ui/icons/Mail'
 import { Child } from '@khai-personal-website/utility-types'
 import { ProgrammingLanguageList, ProgrammingLanguageListData } from './ProgrammingLanguageList'
+import VerticalHeadingTable from './VerticalHeadingTable'
 
 export interface ProfileAttr {
   readonly avatarSrc: string
@@ -26,6 +27,10 @@ export interface ProfileAttr {
   readonly twitterUserHandle: string
   readonly emailAddress: string
   readonly programmingLanguages: readonly ProgrammingLanguageListData[]
+  readonly birthDay: string
+  readonly birthPlace: string
+  readonly expertise: string
+  readonly additionalPersonalInformation?: Record<string, Child>
 }
 
 const useStyles = makeStyles(theme =>
@@ -128,6 +133,16 @@ export function Profile(attr: ProfileAttr) {
       alignItems='center'
       spacing={2}
     >
+      <Expandable title='Personal information' idPrefix='personal-information'>
+        <VerticalHeadingTable
+          data={{
+            'Date of Birth': attr.birthDay,
+            'Place of Birth': attr.birthPlace,
+            'Expertise': attr.expertise,
+            ...attr.additionalPersonalInformation,
+          }}
+        />
+      </Expandable>
       <Expandable title='Most used programming languages' idPrefix='programming-languages'>
         <ProgrammingLanguageList
           githubUserHandle={attr.githubUserHandle}

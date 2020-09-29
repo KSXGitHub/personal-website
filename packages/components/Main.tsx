@@ -21,6 +21,10 @@ export interface MainAttr {
   readonly twitterUserHandle: string
   readonly emailAddress: string
   readonly programmingLanguages: readonly ProgrammingLanguageListData[]
+  readonly birthDay: string
+  readonly birthPlace: string
+  readonly expertise: string
+  readonly additionalPersonalInformation?: Record<string, Child>
 }
 
 const useStyles = makeStyles(theme =>
@@ -63,6 +67,10 @@ export function Main(attr: MainAttr) {
         twitterUserHandle={attr.twitterUserHandle}
         emailAddress={attr.emailAddress}
         programmingLanguages={attr.programmingLanguages}
+        birthDay={attr.birthDay}
+        birthPlace={attr.birthPlace}
+        expertise={attr.expertise}
+        additionalPersonalInformation={attr.additionalPersonalInformation}
       />
     </Container>
   </main>

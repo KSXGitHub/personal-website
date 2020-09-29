@@ -31,6 +31,9 @@ const Home = () =>
         { Icon: TypeScript, langName: 'TypeScript' },
         { Icon: JavaScript, langName: 'JavaScript' },
       ]}
+      birthDay='1996.07.05'
+      birthPlace='Earth, Solar System'
+      expertise='Programming'
     />
   </>
 
