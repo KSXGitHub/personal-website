@@ -1,6 +1,7 @@
 devDependencies:
-  '@material-ui/core': 4.11.0_react-dom@16.13.1+react@16.13.1
-  '@material-ui/icons': 4.9.1_64fe165cdb3bb1449f67ef4ad817869b
+  '@material-ui/core': 4.11.0_9dda0080177cf6c707a911d3fb3b859b
+  '@material-ui/icons': 4.9.1_7adb171526326d06654c36a25f3f6821
+  '@material-ui/styles': 4.10.0_9dda0080177cf6c707a911d3fb3b859b
   '@tools/scripts': 'link:tools/scripts'
   '@types/jest': 26.0.14
   '@types/node': 14.11.2
@@ -52,13 +53,14 @@ packages:
       node: '>= 8.3'
     resolution:
       integrity: sha512-OXD0RgQ86Tu3MazKo8bnrkDRaDXXMGUqd+kTtLtK1Zb7CRzQcaSRPPPV37SvYTdevXEBVxe0HXylEjs8ibkmCw==
-  /@material-ui/core/4.11.0_react-dom@16.13.1+react@16.13.1:
+  /@material-ui/core/4.11.0_9dda0080177cf6c707a911d3fb3b859b:
     dependencies:
       '@babel/runtime': 7.11.2
-      '@material-ui/styles': 4.10.0_react-dom@16.13.1+react@16.13.1
-      '@material-ui/system': 4.9.14_react-dom@16.13.1+react@16.13.1
-      '@material-ui/types': 5.1.0
+      '@material-ui/styles': 4.10.0_9dda0080177cf6c707a911d3fb3b859b
+      '@material-ui/system': 4.9.14_9dda0080177cf6c707a911d3fb3b859b
+      '@material-ui/types': 5.1.0_@types+react@16.9.49
       '@material-ui/utils': 4.10.2_react-dom@16.13.1+react@16.13.1
+      '@types/react': 16.9.49
       '@types/react-transition-group': 4.4.0
       clsx: 1.1.1
       hoist-non-react-statics: 3.3.2
@@ -80,10 +82,11 @@ packages:
         optional: true
     resolution:
       integrity: sha512-bYo9uIub8wGhZySHqLQ833zi4ZML+XCBE1XwJ8EuUVSpTWWG57Pm+YugQToJNFsEyiKFhPh8DPD0bgupz8n01g==
-  /@material-ui/icons/4.9.1_64fe165cdb3bb1449f67ef4ad817869b:
+  /@material-ui/icons/4.9.1_7adb171526326d06654c36a25f3f6821:
     dependencies:
       '@babel/runtime': 7.11.2
-      '@material-ui/core': 4.11.0_react-dom@16.13.1+react@16.13.1
+      '@material-ui/core': 4.11.0_9dda0080177cf6c707a911d3fb3b859b
+      '@types/react': 16.9.49
       react: 16.13.1
       react-dom: 16.13.1_react@16.13.1
     dev: true
@@ -99,12 +102,13 @@ packages:
         optional: true
     resolution:
       integrity: sha512-GBitL3oBWO0hzBhvA9KxqcowRUsA0qzwKkURyC8nppnC3fw54KPKZ+d4V1Eeg/UnDRSzDaI9nGCdel/eh9AQMg==
-  /@material-ui/styles/4.10.0_react-dom@16.13.1+react@16.13.1:
+  /@material-ui/styles/4.10.0_9dda0080177cf6c707a911d3fb3b859b:
     dependencies:
       '@babel/runtime': 7.11.2
       '@emotion/hash': 0.8.0
-      '@material-ui/types': 5.1.0
+      '@material-ui/types': 5.1.0_@types+react@16.9.49
       '@material-ui/utils': 4.10.2_react-dom@16.13.1+react@16.13.1
+      '@types/react': 16.9.49
       clsx: 1.1.1
       csstype: 2.6.13
       hoist-non-react-statics: 3.3.2
@@ -131,10 +135,11 @@ packages:
         optional: true
     resolution:
       integrity: sha512-XPwiVTpd3rlnbfrgtEJ1eJJdFCXZkHxy8TrdieaTvwxNYj42VnnCyFzxYeNW9Lhj4V1oD8YtQ6S5Gie7bZDf7Q==
-  /@material-ui/system/4.9.14_react-dom@16.13.1+react@16.13.1:
+  /@material-ui/system/4.9.14_9dda0080177cf6c707a911d3fb3b859b:
     dependencies:
       '@babel/runtime': 7.11.2
       '@material-ui/utils': 4.10.2_react-dom@16.13.1+react@16.13.1
+      '@types/react': 16.9.49
       csstype: 2.6.13
       prop-types: 15.7.2
       react: 16.13.1
@@ -151,7 +156,9 @@ packages:
         optional: true
     resolution:
       integrity: sha512-oQbaqfSnNlEkXEziDcJDDIy8pbvwUmZXWNqlmIwDqr/ZdCK8FuV3f4nxikUh7hvClKV2gnQ9djh5CZFTHkZj3w==
-  /@material-ui/types/5.1.0:
+  /@material-ui/types/5.1.0_@types+react@16.9.49:
+    dependencies:
+      '@types/react': 16.9.49
     dev: true
     peerDependencies:
       '@types/react': '*'
@@ -853,6 +860,7 @@ packages:
 specifiers:
   '@material-ui/core': ^4.11.0
   '@material-ui/icons': ^4.9.1
+  '@material-ui/styles': ^4.10.0
   '@tools/scripts': 'file:./tools/scripts'
   '@types/jest': ^26.0.14
   '@types/node': ^14.11.2

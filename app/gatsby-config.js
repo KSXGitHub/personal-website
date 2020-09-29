@@ -6,4 +6,6 @@ exports.plugins = [
     isTSX: true,
     allExtensions: true,
   },
+
+  'gatsby-plugin-material-ui',
 ]
