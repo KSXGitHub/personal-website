@@ -92,7 +92,7 @@ export function Profile(attr: ProfileAttr) {
       <AccordionDetails>{children}</AccordionDetails>
     </Accordion>
 
-  return <Grid direction='column' spacing={2}>
+  return <Grid>
     <Card>
       <CardContent>
         <Grid className={classes.personalInformation} direction='column' container>
