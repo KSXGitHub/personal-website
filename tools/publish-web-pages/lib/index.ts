@@ -8,7 +8,7 @@ import http from 'isomorphic-git/http/node'
 import { remove, copy, readdir } from 'fs-extra'
 import places from '@tools/places'
 
-export enum ExitStatus {
+export enum ExitStatusCode {
   Success = 0,
   Failure = 1,
   MissingRequiredEnvironmentVariable = 2,
@@ -30,7 +30,7 @@ function requireEnv<Name extends string>(...names: Name[]): Record<Name, string>
     }
   }
 
-  if (failed) throw process.exit(ExitStatus.MissingRequiredEnvironmentVariable)
+  if (failed) throw process.exit(ExitStatusCode.MissingRequiredEnvironmentVariable)
 
   return result
 }
@@ -104,12 +104,12 @@ export async function main() {
   })
   if (gitAddResult.status) {
     error(`Command 'git add -v .' exits with code ${gitAddResult.status}`)
-    throw process.exit(ExitStatus.GitAddFailure)
+    throw process.exit(ExitStatusCode.GitAddFailure)
   }
   if (gitAddResult.error) {
     error(`Failed to execute 'git add -v .': ${error}`)
     console.error(error)
-    throw process.exit(ExitStatus.GitAddFailure)
+    throw process.exit(ExitStatusCode.GitAddFailure)
   }
 
   const [{
@@ -155,10 +155,10 @@ export async function main() {
     console.info('DONE.')
   } else {
     error(`Failed to push ${commit} to ${GIT_REPO_URL}`)
-    throw process.exit(ExitStatus.GitPushFailure)
+    throw process.exit(ExitStatusCode.GitPushFailure)
   }
 
-  return process.exit(ExitStatus.Success)
+  return process.exit(ExitStatusCode.Success)
 }
 
 export default main
