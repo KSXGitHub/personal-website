@@ -152,7 +152,7 @@ export function Profile(attr: ProfileAttr) {
           src={`https://github-readme-stats.vercel.app/api?username=${attr.githubUserHandle}&show_icons=true`}
         />
       </Expandable>
-      <Expandable title='Sponsor' idPrefix='sponsor'>
+      <Expandable title='Donate Me!' idPrefix='donation'>
         <Link href={`https://patreon.com/${attr.patreonUserHandle}`}>
           <img
             alt='Patreon'
