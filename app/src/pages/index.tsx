@@ -14,6 +14,10 @@ const Home = () =>
       <meta charSet='UTF-8' />
       <title>{title}</title>
       <html lang='en' />
+      <meta
+        name='description'
+        content='This is a profile page made by me for myself. It contains my personal information, profession, hobbies, etc.'
+      />
     </Helmet>
     <Main
       title={title}
