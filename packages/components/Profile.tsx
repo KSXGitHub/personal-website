@@ -11,6 +11,7 @@ import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import AccordionDetails from '@material-ui/core/AccordionDetails'
 import ExpandMore from '@material-ui/icons/ExpandMore'
+import Link from '@material-ui/core/Link'
 import GitHub from '@material-ui/icons/GitHub'
 import Twitter from '@material-ui/icons/Twitter'
 import Mail from '@material-ui/icons/Mail'
@@ -31,6 +32,7 @@ export interface ProfileAttr {
   readonly birthPlace: string
   readonly expertise: string
   readonly additionalPersonalInformation?: Record<string, Child>
+  readonly patreonUserHandle: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -149,6 +151,16 @@ export function Profile(attr: ProfileAttr) {
           alt='GitHub profile statistics'
           src={`https://github-readme-stats.vercel.app/api?username=${attr.githubUserHandle}&show_icons=true`}
         />
+      </Expandable>
+      <Expandable title='Sponsor' idPrefix='sponsor'>
+        <Link href={`https://patreon.com/${attr.patreonUserHandle}`}>
+          <img
+            alt='Patreon'
+            src='https://upload.wikimedia.org/wikipedia/commons/8/82/Patreon_logo_with_wordmark.svg'
+            width={256}
+            height={128}
+          />
+        </Link>
       </Expandable>
     </Grid>
   </Grid>

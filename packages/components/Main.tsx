@@ -25,6 +25,7 @@ export interface MainAttr {
   readonly birthPlace: string
   readonly expertise: string
   readonly additionalPersonalInformation?: Record<string, Child>
+  readonly patreonUserHandle: string
 }
 
 const useStyles = makeStyles(theme =>
@@ -71,6 +72,7 @@ export function Main(attr: MainAttr) {
         birthPlace={attr.birthPlace}
         expertise={attr.expertise}
         additionalPersonalInformation={attr.additionalPersonalInformation}
+        patreonUserHandle={attr.patreonUserHandle}
       />
     </Container>
   </main>

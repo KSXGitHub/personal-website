@@ -40,6 +40,7 @@ const Home = () =>
       birthDay='1996.07.05'
       birthPlace='Earth, Solar System'
       expertise='Programming'
+      patreonUserHandle='khai96_'
     />
   </>
 
