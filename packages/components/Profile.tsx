@@ -89,7 +89,12 @@ export function Profile(attr: ProfileAttr) {
         aria-controls={`${idPrefix}-content`}
         id={`${idPrefix}-content`}
       >
-        <Typography variant='h5'>{title}</Typography>
+        <Typography
+          variant='h5'
+          style={{ cursor: 'pointer' }}
+        >
+          {title}
+        </Typography>
       </AccordionSummary>
       <AccordionDetails>{children}</AccordionDetails>
     </Accordion>
