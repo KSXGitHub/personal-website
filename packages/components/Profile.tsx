@@ -94,7 +94,7 @@ export function Profile(attr: ProfileAttr) {
       <AccordionDetails>{children}</AccordionDetails>
     </Accordion>
 
-  return <Grid>
+  return <>
     <Card>
       <CardContent>
         <Grid className={classes.personalInformation} direction='column' container>
@@ -129,7 +129,7 @@ export function Profile(attr: ProfileAttr) {
         </Grid>
       </CardContent>
     </Card>
-    <Grid>
+    <>
       <Expandable title='Personal information' idPrefix='personal-information'>
         <VerticalHeadingTable
           data={{
@@ -162,8 +162,8 @@ export function Profile(attr: ProfileAttr) {
           />
         </Link>
       </Expandable>
-    </Grid>
-  </Grid>
+    </>
+  </>
 }
 
 export default Profile

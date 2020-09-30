@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
-import Container from '@material-ui/core/Container'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -58,23 +57,21 @@ export function Main(attr: MainAttr) {
         </IconButton>
       </Toolbar>
     </AppBar>
-    <Container>
-      <Profile
-        avatarAlt={attr.avatarAlt}
-        avatarSrc={attr.avatarSrc}
-        fullName={attr.fullName}
-        bioDescription={attr.bioDescription}
-        githubUserHandle={attr.githubUserHandle}
-        twitterUserHandle={attr.twitterUserHandle}
-        emailAddress={attr.emailAddress}
-        programmingLanguages={attr.programmingLanguages}
-        birthDay={attr.birthDay}
-        birthPlace={attr.birthPlace}
-        expertise={attr.expertise}
-        additionalPersonalInformation={attr.additionalPersonalInformation}
-        patreonUserHandle={attr.patreonUserHandle}
-      />
-    </Container>
+    <Profile
+      avatarAlt={attr.avatarAlt}
+      avatarSrc={attr.avatarSrc}
+      fullName={attr.fullName}
+      bioDescription={attr.bioDescription}
+      githubUserHandle={attr.githubUserHandle}
+      twitterUserHandle={attr.twitterUserHandle}
+      emailAddress={attr.emailAddress}
+      programmingLanguages={attr.programmingLanguages}
+      birthDay={attr.birthDay}
+      birthPlace={attr.birthPlace}
+      expertise={attr.expertise}
+      additionalPersonalInformation={attr.additionalPersonalInformation}
+      patreonUserHandle={attr.patreonUserHandle}
+    />
   </main>
 }
 
