@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         pnpm:
-          - 5.0.2
+          - 5.5.1
         vars:
           - id: 0
             node: 12.x
