@@ -144,6 +144,12 @@ export function Profile(attr: ProfileAttr) {
           data={attr.programmingLanguages}
         />
       </Expandable>
+      <Expandable title='GitHub profile statistics' idPrefix='github-profile-statistics'>
+        <img
+          alt='GitHub profile statistics'
+          src={`https://github-readme-stats.vercel.app/api?username=${attr.githubUserHandle}&show_icons=true`}
+        />
+      </Expandable>
     </Grid>
   </Grid>
 }
