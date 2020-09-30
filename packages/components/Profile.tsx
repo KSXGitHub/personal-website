@@ -102,7 +102,7 @@ export function Profile(attr: ProfileAttr) {
               alt={attr.avatarAlt}
               src={attr.avatarSrc}
             />
-            <Grid direction='column'>
+            <Grid>
               <Typography variant='h4'>{attr.fullName}</Typography>
               <ButtonGroup>
                 <ExContactLink
@@ -127,7 +127,7 @@ export function Profile(attr: ProfileAttr) {
         </Grid>
       </CardContent>
     </Card>
-    <Grid spacing={2}>
+    <Grid>
       <Expandable title='Personal information' idPrefix='personal-information'>
         <VerticalHeadingTable
           data={{
