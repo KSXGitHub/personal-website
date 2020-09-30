@@ -33,6 +33,23 @@ jobs:
         run: pnpm run test:ci
       - name: Build
         run: pnpm run build
+      - name: Add some files
+        run: |
+          set -o errexit -o pipefail -o nounset
+
+          # Sponsor
+          mkdir -pv dist/.github
+          cp -v .github/FUNDING.yml dist/.github/FUNDING.yml
+
+          # License
+          cp -v LICENSE* dist/
+
+          # ReadMe
+          (
+            echo '# Personal Website'
+            echo
+            echo "Source Code: https://github.com/$GITHUB_REPOSITORY"
+          ) > dist/README.md
       - name: Publish Web Pages (https://ksxgithub.github.io)
         env:
           GIT_REPO_URL: https://github.com/KSXGitHub/KSXGitHub.github.io.git
