@@ -116,7 +116,6 @@ abstract class Dict {
   public readonly clean = new Command(
     'Clean build products',
     async () => {
-      await this.callCmd('cleanDocs')
       await this.callCmd('cleanTypescriptBuild')
     },
   )
@@ -219,15 +218,6 @@ abstract class Dict {
     this.mkspawn(commands.makeMJS),
   )
 
-  public readonly cleanDocs = new Command(
-    'Delete docs folder',
-    async () => {
-      const { remove } = await import('fs-extra')
-      console.info('Deleting', places.docs)
-      await remove(places.docs)
-    },
-  )
-
   public readonly cleanGhPages = new Command(
     'Clean gh-pages cache',
     async () => {
@@ -275,14 +265,6 @@ abstract class Dict {
   public readonly publishWebPages = new Command(
     'Publish documentation to gh-pages',
     this.mkspawn(commands.publishWebPages),
-  )
-
-  public readonly updateDocs = new Command(
-    'Rebuild and publish documentation to gh-pages',
-    async () => {
-      await this.callCmd('cleanDocs')
-      await this.callCmd('publishWebPages')
-    },
   )
 
   public readonly runAppScript = new Command(
