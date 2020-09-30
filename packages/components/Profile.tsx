@@ -127,12 +127,7 @@ export function Profile(attr: ProfileAttr) {
         </Grid>
       </CardContent>
     </Card>
-    <Grid
-      direction='column'
-      justify='center'
-      alignItems='center'
-      spacing={2}
-    >
+    <Grid spacing={2}>
       <Expandable title='Personal information' idPrefix='personal-information'>
         <VerticalHeadingTable
           data={{
