@@ -147,7 +147,7 @@ export async function main() {
   })
   console.info(`created commit ${commit}`)
 
-  startGroup(`Pushing to ${GIT_REPO_URL}`)
+  console.info(`Pushing to ${GIT_REPO_URL}`)
   const pushResult = await git.push({
     fs,
     http,
@@ -156,11 +156,7 @@ export async function main() {
     ref: 'master',
     force: true,
     onAuth,
-    onProgress(progress) {
-      console.info('progress', progress)
-    },
   })
-  endGroup()
 
   if (pushResult.ok) {
     console.info('DONE.')
