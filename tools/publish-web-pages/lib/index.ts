@@ -42,6 +42,7 @@ const {
   GIT_AUTHOR_NAME,
   GIT_AUTHOR_EMAIL,
   GITHUB_SHA,
+  GITHUB_REPOSITORY,
 } = requireEnv(
   'GIT_REPO_URL',
   'GIT_USERNAME',
@@ -49,6 +50,7 @@ const {
   'GIT_AUTHOR_NAME',
   'GIT_AUTHOR_EMAIL',
   'GITHUB_SHA',
+  'GITHUB_REPOSITORY',
 )
 
 const onAuth = () => ({
@@ -131,7 +133,12 @@ export async function main() {
       name: GIT_AUTHOR_NAME,
       email: GIT_AUTHOR_EMAIL,
     },
-    message: latestCommitMessage,
+    message: [
+      `Automatically updated by ${GITHUB_REPOSITORY}@${GITHUB_SHA}`,
+      '',
+      `ref: ${GITHUB_REPOSITORY}@${GITHUB_SHA}`,
+      ...latestCommitMessage.split('\n').map(line => 'message: ' + line),
+    ].join('\n'),
     ref: 'master',
   })
   console.info(`created commit ${commit}`)
