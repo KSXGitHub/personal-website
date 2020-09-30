@@ -146,7 +146,7 @@ abstract class Dict {
     },
   )
 
-  public readonly publish = new Command(
+  public readonly publishPackages = new Command(
     'Publish packages versions that have yet to publish',
     async args => {
       await this.callCmd('prepublish')
@@ -159,7 +159,6 @@ abstract class Dict {
         ...args,
       ).exit.onerror()
 
-      await this.callCmd('publishWebPages')
       await this.callCmd('postpublish')
     },
   )
