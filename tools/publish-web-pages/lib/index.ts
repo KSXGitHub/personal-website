@@ -70,7 +70,7 @@ export async function main() {
   })
 
   startGroup(`Delete old files from ${dir}`)
-  for (const name of await readdir('.')) {
+  for (const name of await readdir(dir)) {
     if (name === '.git') {
       console.info(`skip ${name}`)
       continue
