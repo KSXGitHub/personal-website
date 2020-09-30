@@ -7,12 +7,14 @@ export interface VerticalHeadingTableAttr {
 
 export const VerticalHeadingTable = (attr: VerticalHeadingTableAttr) =>
   <table>
-    {Object.entries(attr.data).map(([title, content], key) =>
-      <tr key={key}>
-        <th>{title}</th>
-        <td>{content}</td>
-      </tr>
-    )}
+    <tbody>
+      {Object.entries(attr.data).map(([title, content], key) =>
+        <tr key={key}>
+          <th>{title}</th>
+          <td>{content}</td>
+        </tr>
+      )}
+    </tbody>
   </table>
 
 export default VerticalHeadingTable
