@@ -4,6 +4,7 @@ import Main from '@khai-personal-website/components/Main'
 import Rust from '@khai-personal-website/icons/Rust'
 import TypeScript from '@khai-personal-website/icons/TypeScript'
 import JavaScript from '@khai-personal-website/icons/JavaScript'
+import Shell from '@khai-personal-website/icons/Shell'
 
 const title = "Khải's Profile"
 
@@ -30,6 +31,7 @@ const Home = () =>
         { Icon: Rust, langName: 'Rust' },
         { Icon: TypeScript, langName: 'TypeScript' },
         { Icon: JavaScript, langName: 'JavaScript' },
+        { Icon: Shell, langName: 'Shell' },
       ]}
       birthDay='1996.07.05'
       birthPlace='Earth, Solar System'
