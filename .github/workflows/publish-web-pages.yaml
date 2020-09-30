@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v1.4.3
         with:
           node-version: 14.x
-      - uses: actions/cache@v1.1.2
+      - uses: actions/cache@v2.1.1
         with:
           path: ~/.pnpm-store/v3
           key: pnpm5-${{ hashFiles('**/pnpm-lock.yaml') }}
