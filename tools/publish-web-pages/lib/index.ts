@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs'
+import { spawnSync } from 'child_process'
 import process from 'process'
 import { error, startGroup, endGroup } from '@actions/core'
 import git from 'isomorphic-git'
@@ -12,6 +13,7 @@ export enum ExitStatus {
   Failure = 1,
   MissingRequiredEnvironmentVariable = 2,
   GitPushFailure = 3,
+  GitAddFailure = 4,
 }
 
 function requireEnv<Name extends string>(...names: Name[]): Record<Name, string> {
@@ -96,11 +98,19 @@ export async function main() {
   endGroup()
 
   console.info('Running git add')
-  await git.add({
-    fs,
-    dir,
-    filepath: '.',
+  const gitAddResult = spawnSync('git', ['add', '-v', '.'], {
+    cwd: dir,
+    stdio: 'inherit',
   })
+  if (gitAddResult.status) {
+    error(`Command 'git add -v .' exits with code ${gitAddResult.status}`)
+    throw process.exit(ExitStatus.GitAddFailure)
+  }
+  if (gitAddResult.error) {
+    error(`Failed to execute 'git add -v .': ${error}`)
+    console.error(error)
+    throw process.exit(ExitStatus.GitAddFailure)
+  }
 
   const [{
     commit: {
