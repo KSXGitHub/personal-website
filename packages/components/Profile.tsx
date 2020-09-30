@@ -14,6 +14,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 import Link from '@material-ui/core/Link'
 import GitHub from '@material-ui/icons/GitHub'
 import Twitter from '@material-ui/icons/Twitter'
+import Facebook from '@material-ui/icons/Facebook'
 import Mail from '@material-ui/icons/Mail'
 import { Child } from '@khai-personal-website/utility-types'
 import { ProgrammingLanguageList, ProgrammingLanguageListData } from './ProgrammingLanguageList'
@@ -26,6 +27,7 @@ export interface ProfileAttr {
   readonly bioDescription: Child
   readonly githubUserHandle: string
   readonly twitterUserHandle: string
+  readonly facebookUserID: string
   readonly emailAddress: string
   readonly programmingLanguages: readonly ProgrammingLanguageListData[]
   readonly birthDay: string
@@ -121,6 +123,11 @@ export function Profile(attr: ProfileAttr) {
                   Icon={Twitter}
                   ariaLabel='twitter profile'
                   href={`https://twitter.com/${attr.twitterUserHandle}`}
+                />
+                <ExContactLink
+                  Icon={Facebook}
+                  ariaLabel='facebook page'
+                  href={`https://facebook.com/${attr.facebookUserID}`}
                 />
                 <ExContactLink
                   Icon={Mail}

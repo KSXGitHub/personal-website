@@ -18,6 +18,7 @@ export interface MainAttr {
   readonly bioDescription: Child
   readonly githubUserHandle: string
   readonly twitterUserHandle: string
+  readonly facebookUserID: string
   readonly emailAddress: string
   readonly programmingLanguages: readonly ProgrammingLanguageListData[]
   readonly birthDay: string
@@ -64,6 +65,7 @@ export function Main(attr: MainAttr) {
       bioDescription={attr.bioDescription}
       githubUserHandle={attr.githubUserHandle}
       twitterUserHandle={attr.twitterUserHandle}
+      facebookUserID={attr.facebookUserID}
       emailAddress={attr.emailAddress}
       programmingLanguages={attr.programmingLanguages}
       birthDay={attr.birthDay}

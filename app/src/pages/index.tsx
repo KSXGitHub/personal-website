@@ -30,6 +30,7 @@ const Home = () =>
       </span>}
       githubUserHandle='KSXGitHub'
       twitterUserHandle='hvksmr1996'
+      facebookUserID='hvk.hoang'
       emailAddress='hvksmr1996@gmail.com'
       programmingLanguages={[
         { Icon: Rust, langName: 'Rust' },
