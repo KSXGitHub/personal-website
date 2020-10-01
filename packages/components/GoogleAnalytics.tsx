@@ -1,5 +1,4 @@
 import React from 'react'
-import { initialize, pageview } from 'react-ga'
 
 export interface GoogleAnalyticsAttr {
   readonly trackerId: string
@@ -7,9 +6,34 @@ export interface GoogleAnalyticsAttr {
 
 export function GoogleAnalytics(attr: GoogleAnalyticsAttr) {
   React.useEffect(() => {
-    if (typeof window === 'undefined') return
-    initialize(attr.trackerId)
-    pageview(window.location.href)
+    if (typeof document === 'undefined') return
+
+    type ScriptInitializer = (script: HTMLScriptElement) => void
+
+    const scriptInitializers: readonly ScriptInitializer[] = [
+      script => {
+        script.async = true
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${attr.trackerId}`
+      },
+
+      script => {
+        script.text = `
+          window.dataLayer = window.dataLayer || [];
+          function gTag(){dataLayer.push(arguments);}
+          gTag('js', new Date());
+          gTag('config', ${JSON.stringify(attr.trackerId)});
+        `
+      },
+    ]
+
+    for (const initScript of scriptInitializers) {
+      const script = document.createElement('script')
+      initScript(script)
+      script.addEventListener('load', () => {
+        document.body.removeChild(script)
+      })
+      document.body.appendChild(script)
+    }
   })
 
   return <></>
