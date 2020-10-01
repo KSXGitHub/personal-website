@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import GitHubIcon from '@material-ui/icons/GitHub'
+import PrintIcon from '@material-ui/icons/Print'
 import { Child } from '@khai-personal-website/utility-types'
 import Profile from './Profile'
 import LicenseFooter from './LicenseFooter'
@@ -57,6 +58,13 @@ export function Main(attr: MainAttr) {
     <AppBar position='static'>
       <Toolbar>
         <Typography className={classes.title} variant='h3'>{attr.title}</Typography>
+        <IconButton
+          color='inherit'
+          title='Print'
+          onClick={() => window.print()}
+        >
+          <PrintIcon />
+        </IconButton>
         <IconButton
           color='inherit'
           target='_blank'
