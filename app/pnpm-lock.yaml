@@ -12,6 +12,8 @@ dependencies:
   gatsby: 2.24.65_gatsby@2.24.65
   gatsby-legacy-polyfills: 0.0.5
   gatsby-link: 2.4.14_@reach+router@1.3.4
+  gatsby-plugin-google-analytics: 2.3.15_gatsby@2.24.65
+  gatsby-plugin-google-tagmanager: 2.3.13_gatsby@2.24.65
   gatsby-plugin-material-ui: 2.1.10_gatsby@2.24.65
   gatsby-plugin-react-helmet: 3.3.11_e96b0fbe44c2bba1735f5b956340461b
   gatsby-plugin-typescript: 2.4.20_gatsby@2.24.65
@@ -5887,6 +5889,31 @@ packages:
       node: '>=10.13.0'
     resolution:
       integrity: sha512-0npo/wjYO94nqcjl0aMkL65LvJuVnaieJzlxpA6Fdj2s90RjKI0mCj/3VPvRBz3p0aDp5+gas4kUa5KE4B3b0Q==
+  /gatsby-plugin-google-analytics/2.3.15_gatsby@2.24.65:
+    dependencies:
+      '@babel/runtime': 7.11.2
+      gatsby: 2.24.65_gatsby@2.24.65
+      minimatch: 3.0.4
+    dev: false
+    engines:
+      node: '>=10.13.0'
+    peerDependencies:
+      gatsby: ^2.0.0
+      react: ^16.4.2
+      react-dom: ^16.4.2
+    resolution:
+      integrity: sha512-93i4Qk7t15+7SXJb4rgMhqvaC2OM9HFAVB/9kDpVDihv3p9di2ujXta5Djn+lZnO98eXsyCmczNCfbBehG9ETQ==
+  /gatsby-plugin-google-tagmanager/2.3.13_gatsby@2.24.65:
+    dependencies:
+      '@babel/runtime': 7.11.2
+      gatsby: 2.24.65_gatsby@2.24.65
+    dev: false
+    engines:
+      node: '>=10.13.0'
+    peerDependencies:
+      gatsby: ^2.0.0
+    resolution:
+      integrity: sha512-mtpDza7E7xFOBK2V1JNxgensjqn6K/Eooz/uPUBcuk5DytOB3JvMNVKQaEmxfpKHUN06igJAqb8l0y0UxKUWeA==
   /gatsby-plugin-material-ui/2.1.10_gatsby@2.24.65:
     dependencies:
       autoprefixer: 9.8.6
@@ -13135,6 +13162,8 @@ specifiers:
   gatsby: ^2.24.65
   gatsby-legacy-polyfills: ^0.0.5
   gatsby-link: ^2.4.14
+  gatsby-plugin-google-analytics: ^2.3.15
+  gatsby-plugin-google-tagmanager: ^2.3.13
   gatsby-plugin-material-ui: ^2.1.10
   gatsby-plugin-react-helmet: ^3.3.11
   gatsby-plugin-typescript: ^2.4.20

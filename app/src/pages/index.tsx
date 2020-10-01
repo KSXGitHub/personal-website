@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Main from '@khai-personal-website/components/Main'
-import GoogleAnalytics from '@khai-personal-website/components/GoogleAnalytics'
 import Rust from '@khai-personal-website/icons/Rust'
 import TypeScript from '@khai-personal-website/icons/TypeScript'
 import JavaScript from '@khai-personal-website/icons/JavaScript'
@@ -50,7 +49,6 @@ const Home = () =>
       licenseRef='https://github.com/KSXGitHub/personal-website/blob/master/LICENSE.md'
       licenseHolderName='Hoàng Văn Khải'
     />
-    <GoogleAnalytics trackerId='UA-179378718-1' />
   </>
 
 export default Home
