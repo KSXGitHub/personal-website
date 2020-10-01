@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import { Child } from '@khai-personal-website/utility-types'
 import Profile from './Profile'
+import LicenseFooter from './LicenseFooter'
 import { ProgrammingLanguageListData } from './ProgrammingLanguageList'
 
 export interface MainAttr {
@@ -83,14 +84,12 @@ export function Main(attr: MainAttr) {
       additionalPersonalInformation={attr.additionalPersonalInformation}
       patreonUserHandle={attr.patreonUserHandle}
     />
-    <footer className={classes.footer}>
-      <p>Released under <a href={attr.licenseRef}>{attr.licenseName}</a>.</p>
-      <p>
-        Copyright © {attr.licenseYear}
-        {' '}
-        {attr.licenseHolderName}
-      </p>
-    </footer>
+    <LicenseFooter
+      year={attr.licenseYear}
+      name={attr.licenseName}
+      href={attr.licenseRef}
+      holder={attr.licenseName}
+    />
   </main>
 }
 
