@@ -44,6 +44,10 @@ const Home = () =>
       birthPlace='Earth, Solar System'
       expertise='Programming'
       patreonUserHandle='khai96_'
+      licenseYear='2020'
+      licenseName='MIT License'
+      licenseRef='https://github.com/KSXGitHub/personal-website/blob/master/LICENSE.md'
+      licenseHolderName='Hoàng Văn Khải'
     />
   </>
 

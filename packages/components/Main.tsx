@@ -26,6 +26,10 @@ export interface MainAttr {
   readonly expertise: string
   readonly additionalPersonalInformation?: Record<string, Child>
   readonly patreonUserHandle: string
+  readonly licenseYear: Child
+  readonly licenseName: Child
+  readonly licenseRef: string
+  readonly licenseHolderName: Child
 }
 
 const useStyles = makeStyles(theme =>
@@ -36,6 +40,11 @@ const useStyles = makeStyles(theme =>
     title: {
       flexGrow: 1,
       marginRight: theme.spacing(2),
+    },
+    footer: {
+      display: 'block',
+      textAlign: 'center',
+      fontSize: '0.8rem',
     },
   })
 )
@@ -74,6 +83,14 @@ export function Main(attr: MainAttr) {
       additionalPersonalInformation={attr.additionalPersonalInformation}
       patreonUserHandle={attr.patreonUserHandle}
     />
+    <footer className={classes.footer}>
+      <p>Released under <a href={attr.licenseRef}>{attr.licenseName}</a>.</p>
+      <p>
+        Copyright © {attr.licenseYear}
+        {' '}
+        {attr.licenseHolderName}
+      </p>
+    </footer>
   </main>
 }
 
