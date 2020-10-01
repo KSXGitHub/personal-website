@@ -1,12 +1,7 @@
 import React from 'react'
 import { makeStyles, createStyles } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import IconButton from '@material-ui/core/IconButton'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import PrintIcon from '@material-ui/icons/Print'
 import { Child } from '@khai-personal-website/utility-types'
+import MainAppBar from './MainAppBar'
 import Profile from './Profile'
 import LicenseFooter from './LicenseFooter'
 import { ProgrammingLanguageListData } from './ProgrammingLanguageList'
@@ -55,27 +50,10 @@ export function Main(attr: MainAttr) {
   const classes = useStyles()
 
   return <main className={classes.root}>
-    <AppBar position='static'>
-      <Toolbar>
-        <Typography className={classes.title} variant='h3'>{attr.title}</Typography>
-        <IconButton
-          color='inherit'
-          title='Print'
-          onClick={() => window.print()}
-        >
-          <PrintIcon />
-        </IconButton>
-        <IconButton
-          color='inherit'
-          target='_blank'
-          title='Source Code'
-          href={attr.repository}
-          rel='noopener'
-        >
-          <GitHubIcon />
-        </IconButton>
-      </Toolbar>
-    </AppBar>
+    <MainAppBar
+      title={attr.title}
+      repository={attr.repository}
+    />
     <Profile
       avatarAlt={attr.avatarAlt}
       avatarSrc={attr.avatarSrc}
