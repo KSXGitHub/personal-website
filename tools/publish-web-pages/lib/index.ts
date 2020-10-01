@@ -137,11 +137,10 @@ export async function main() {
       `Automatically updated by ${GITHUB_REPOSITORY}@${GITHUB_SHA}`,
       '',
       `ref: ${GITHUB_REPOSITORY}@${GITHUB_SHA}`,
-      latestCommitMessage
+      ...latestCommitMessage
+        .trim()
         .split('\n')
-        .map(line => 'msg: ' + line)
-        .join('\n')
-        .trim(),
+        .map(line => 'msg: ' + line),
     ].join('\n'),
     ref: 'master',
   })
