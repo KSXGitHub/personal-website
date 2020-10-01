@@ -7,12 +7,14 @@ import JavaScript from '@khai-personal-website/icons/JavaScript'
 import Shell from '@khai-personal-website/icons/Shell'
 
 const title = "Khải's Profile"
+const avatar = 'https://avatars3.githubusercontent.com/u/11488886?s=460&u=76f47499f89ba390e2322a5ebef112fb9e5ad9ef&v=4'
 
 const Home = () =>
   <>
     <Helmet>
       <meta charSet='UTF-8' />
       <title>{title}</title>
+      <link rel='icon' href={avatar} />
       <html lang='en' />
       <meta
         name='description'
@@ -23,7 +25,7 @@ const Home = () =>
       title={title}
       repository='https://github.com/KSXGitHub/personal-website.git'
       avatarAlt='Khải'
-      avatarSrc='https://avatars3.githubusercontent.com/u/11488886?s=460&u=76f47499f89ba390e2322a5ebef112fb9e5ad9ef&v=4'
+      avatarSrc={avatar}
       fullName={<span lang='vi'>Hoàng Văn Khải</span>}
       bioDescription={<span lang='en'>
         In the date of my birth, the last spark of light extinguished, darkness swallowed everything, it was... evening.
