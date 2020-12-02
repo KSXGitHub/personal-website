@@ -2,7 +2,7 @@ dependencies:
   '@sane-fmt/wasm32-wasi': 0.6.1
   '@tools/places': 'link:../places'
   exec-inline: 0.0.5
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@sane-fmt/wasm32-wasi/0.6.1:
     dependencies:
