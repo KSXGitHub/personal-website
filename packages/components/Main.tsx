@@ -1,9 +1,9 @@
-import React from 'react'
-import { makeStyles, createStyles } from '@material-ui/core/styles'
 import { Child } from '@khai-personal-website/utility-types'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
+import React from 'react'
+import LicenseFooter from './LicenseFooter'
 import MainAppBar from './MainAppBar'
 import Profile from './Profile'
-import LicenseFooter from './LicenseFooter'
 import { ProgrammingLanguageListData } from './ProgrammingLanguageList'
 
 export interface MainAttr {

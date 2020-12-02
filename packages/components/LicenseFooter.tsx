@@ -1,6 +1,6 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import { Child } from '@khai-personal-website/utility-types'
+import { makeStyles } from '@material-ui/core/styles'
+import React from 'react'
 
 export interface LicenseFooterAttr {
   readonly year: Child

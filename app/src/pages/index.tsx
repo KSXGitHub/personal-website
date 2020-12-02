@@ -1,10 +1,10 @@
+import Main from '@khai-personal-website/components/Main'
+import JavaScript from '@khai-personal-website/icons/JavaScript'
+import Rust from '@khai-personal-website/icons/Rust'
+import Shell from '@khai-personal-website/icons/Shell'
+import TypeScript from '@khai-personal-website/icons/TypeScript'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Main from '@khai-personal-website/components/Main'
-import Rust from '@khai-personal-website/icons/Rust'
-import TypeScript from '@khai-personal-website/icons/TypeScript'
-import JavaScript from '@khai-personal-website/icons/JavaScript'
-import Shell from '@khai-personal-website/icons/Shell'
 
 const title = "Khải's Profile"
 const avatar = 'https://avatars3.githubusercontent.com/u/11488886?s=460&u=76f47499f89ba390e2322a5ebef112fb9e5ad9ef&v=4'

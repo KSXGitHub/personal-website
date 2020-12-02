@@ -1,12 +1,12 @@
-import path from 'path'
-import fs from 'fs'
-import { spawnSync } from 'child_process'
-import process from 'process'
 import { error, startGroup, endGroup } from '@actions/core'
+import places from '@tools/places'
+import { spawnSync } from 'child_process'
+import fs from 'fs'
+import { remove, copy, readdir } from 'fs-extra'
 import git from 'isomorphic-git'
 import http from 'isomorphic-git/http/node'
-import { remove, copy, readdir } from 'fs-extra'
-import places from '@tools/places'
+import path from 'path'
+import process from 'process'
 
 export enum ExitStatusCode {
   Success = 0,

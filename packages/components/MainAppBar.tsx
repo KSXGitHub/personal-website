@@ -1,12 +1,12 @@
-import React from 'react'
-import { makeStyles, createStyles } from '@material-ui/core/styles'
+import { Child } from '@khai-personal-website/utility-types'
 import AppBar from '@material-ui/core/AppBar'
+import IconButton from '@material-ui/core/IconButton'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import IconButton from '@material-ui/core/IconButton'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import PrintIcon from '@material-ui/icons/Print'
-import { Child } from '@khai-personal-website/utility-types'
+import React from 'react'
 
 export interface MainAppBarAttr {
   readonly title: Child

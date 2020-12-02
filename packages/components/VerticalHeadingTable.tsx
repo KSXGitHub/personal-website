@@ -1,5 +1,5 @@
-import React from 'react'
 import { Child } from '@khai-personal-website/utility-types'
+import React from 'react'
 
 export interface VerticalHeadingTableAttr {
   readonly data: Record<string, Child>
