@@ -14,6 +14,7 @@ const Home = () =>
     <Helmet>
       <meta charSet='UTF-8' />
       <title>{title}</title>
+      <link rel='preload' href={avatar} />
       <link rel='icon' href={avatar} />
       <html lang='en' />
       <meta
