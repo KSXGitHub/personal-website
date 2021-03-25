@@ -30,6 +30,7 @@ export function MainAppBar(attr: MainAppBarAttr) {
       <IconButton
         color='inherit'
         title='Print'
+        aria-label='Print'
         onClick={() => window.print()}
       >
         <PrintIcon />
