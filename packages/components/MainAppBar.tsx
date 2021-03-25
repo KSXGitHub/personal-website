@@ -38,6 +38,7 @@ export function MainAppBar(attr: MainAppBarAttr) {
         color='inherit'
         target='_blank'
         title='Source Code'
+        aria-label='Source Code'
         href={attr.repository}
         rel='noopener'
       >
