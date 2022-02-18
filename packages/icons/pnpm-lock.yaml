@@ -1,19 +1,19 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/node': ^14.11.2
-  tslib: ^2.0.1
+  '@types/node': ^17.0.18
+  tslib: ^2.3.1
 
 dependencies:
-  '@types/node': 14.11.2
-  tslib: 2.0.1
+  '@types/node': 17.0.18
+  tslib: 2.3.1
 
 packages:
 
-  /@types/node/14.11.2:
-    resolution: {integrity: sha512-jiE3QIxJ8JLNcb1Ps6rDbysDhN4xa8DJJvuC9prr6w+1tIh+QAbYyNF3tyiZNLDBIuBCf4KEcV2UvQm/V60xfA==}
+  /@types/node/17.0.18:
+    resolution: {integrity: sha512-eKj4f/BsN/qcculZiRSujogjvp5O/k4lOW5m35NopjZM/QwLOR075a8pJW5hD+Rtdm2DaCVPENS6KtSQnUD6BA==}
     dev: false
 
-  /tslib/2.0.1:
-    resolution: {integrity: sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==}
+  /tslib/2.3.1:
+    resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
     dev: false

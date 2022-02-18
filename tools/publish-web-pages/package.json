@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "isomorphic-git": "^1.7.8",
+    "@actions/core": "^1.6.0",
+    "isomorphic-git": "^1.11.2",
     "fs-extra": "^10.0.0",
-    "@types/fs-extra": "^9.0.1",
+    "@types/fs-extra": "^9.0.13",
     "@tools/preloaded-node": "file:../preloaded-node",
     "@tools/places": "file:../places"
   }
