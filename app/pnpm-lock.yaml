@@ -18,7 +18,7 @@ specifiers:
   gatsby-plugin-react-helmet: ^3.3.11
   gatsby-plugin-typescript: ^2.4.20
   gatsby-react-router-scroll: ^3.0.13
-  mitt: ^2.1.0
+  mitt: ^3.0.0
   prop-types: ^15.7.2
   query-string: ^6.13.3
   react-error-overlay: ^6.0.7
@@ -45,7 +45,7 @@ dependencies:
   gatsby-plugin-react-helmet: 3.3.11_e96b0fbe44c2bba1735f5b956340461b
   gatsby-plugin-typescript: 2.4.20_gatsby@2.24.65
   gatsby-react-router-scroll: 3.0.13_@reach+router@1.3.4
-  mitt: 2.1.0
+  mitt: 3.0.0
   prop-types: 15.7.2
   query-string: 6.13.3
   react-error-overlay: 6.0.7
@@ -8279,8 +8279,8 @@ packages:
     resolution: {integrity: sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw==}
     dev: false
 
-  /mitt/2.1.0:
-    resolution: {integrity: sha512-ILj2TpLiysu2wkBbWjAmww7TkZb65aiQO+DkVdUTBpBXq+MHYiETENkKFMtsJZX1Lf4pe4QOrTSjIfUwN5lRdg==}
+  /mitt/3.0.0:
+    resolution: {integrity: sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==}
     dev: false
 
   /mixin-deep/1.3.2:
