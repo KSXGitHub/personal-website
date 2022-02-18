@@ -1,31 +1,34 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@tools/places': file:../places
+  string-template-format-inspect: ^0.1.8
+
 dependencies:
-  '@tools/places': 'link:../places'
+  '@tools/places': link:../places
   string-template-format-inspect: 0.1.8
-lockfileVersion: 5.2
+
 packages:
+
   /@types/node/14.6.2:
+    resolution: {integrity: sha512-onlIwbaeqvZyniGPfdw/TEhKIh79pz66L1q06WUQqJLnAb6wbjvOtepLYTGHTqzdXgBYIE3ZdmqHDGsRsbBz7A==}
     dev: false
-    resolution:
-      integrity: sha512-onlIwbaeqvZyniGPfdw/TEhKIh79pz66L1q06WUQqJLnAb6wbjvOtepLYTGHTqzdXgBYIE3ZdmqHDGsRsbBz7A==
+
   /string-template-format-base/0.1.7:
+    resolution: {integrity: sha512-ySUoRCuRa6nhwJ6Xcu41VEpvwuDDVVPPqOnEf4P0UG4L860xbvC66YH0xno7dKW2JjN8jX0YstAcGk2q6Z6JzA==}
     dependencies:
       '@types/node': 14.6.2
       tslib: 2.0.1
     dev: false
-    resolution:
-      integrity: sha512-ySUoRCuRa6nhwJ6Xcu41VEpvwuDDVVPPqOnEf4P0UG4L860xbvC66YH0xno7dKW2JjN8jX0YstAcGk2q6Z6JzA==
+
   /string-template-format-inspect/0.1.8:
+    resolution: {integrity: sha512-k3lQNBDZ8o6Q0o9WYXLUgKwDtmn1OpERFJZb4NPwG2MvgDD2iI6+9yDVK66WsyGI90ljF2wh/5KjO0E5tIE1Ig==}
     dependencies:
       '@types/node': 14.6.2
       string-template-format-base: 0.1.7
       tslib: 2.0.1
     dev: false
-    resolution:
-      integrity: sha512-k3lQNBDZ8o6Q0o9WYXLUgKwDtmn1OpERFJZb4NPwG2MvgDD2iI6+9yDVK66WsyGI90ljF2wh/5KjO0E5tIE1Ig==
+
   /tslib/2.0.1:
+    resolution: {integrity: sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==}
     dev: false
-    resolution:
-      integrity: sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
-specifiers:
-  '@tools/places': 'file:../places'
-  string-template-format-inspect: ^0.1.8
