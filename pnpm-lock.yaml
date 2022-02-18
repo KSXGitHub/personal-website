@@ -6,7 +6,7 @@ specifiers:
   '@material-ui/styles': ^4.10.0
   '@tools/scripts': file:./tools/scripts
   '@types/jest': ^26.0.14
-  '@types/node': ^14.11.2
+  '@types/node': ^16.0.0
   '@types/react': ^16.9.49
   react: ^16.13.1
   react-dom: ^16.13.1
@@ -21,7 +21,7 @@ devDependencies:
   '@material-ui/styles': 4.10.0_9dda0080177cf6c707a911d3fb3b859b
   '@tools/scripts': link:tools/scripts
   '@types/jest': 26.0.14
-  '@types/node': 14.11.2
+  '@types/node': 16.11.25
   '@types/react': 16.9.49
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
@@ -201,7 +201,7 @@ packages:
   /@types/cosmiconfig/5.0.3:
     resolution: {integrity: sha512-HgTGG7X5y9pLl3pixeo2XtDEFD8rq2EuH+S4mK6teCnAwWMucQl6v1D43hI4Uw1VJh6nu59lxLkqXHRl4uwThA==}
     dependencies:
-      '@types/node': 14.6.1
+      '@types/node': 16.11.25
     dev: true
 
   /@types/istanbul-lib-coverage/2.0.3:
@@ -232,12 +232,8 @@ packages:
     resolution: {integrity: sha512-ge4xZ3vSBornVYlDnk7yZ0gK6ChHf/CHB7Gl1I0Jhah8DDnEQqBzgohYG4FX4p81TNirSETOiSyn+y1r9/IR6w==}
     dev: true
 
-  /@types/node/14.11.2:
-    resolution: {integrity: sha512-jiE3QIxJ8JLNcb1Ps6rDbysDhN4xa8DJJvuC9prr6w+1tIh+QAbYyNF3tyiZNLDBIuBCf4KEcV2UvQm/V60xfA==}
-    dev: true
-
-  /@types/node/14.6.1:
-    resolution: {integrity: sha512-HnYlg/BRF8uC1FyKRFZwRaCPTPYKa+6I8QiUZFLredaGOou481cgFS4wKRFyKvQtX8xudqkSdBczJHIYSQYKrQ==}
+  /@types/node/16.11.25:
+    resolution: {integrity: sha512-NrTwfD7L1RTc2qrHQD4RTTy4p0CO2LatKBEKEds3CaVuhoM/+DJzmWZl5f+ikR8cm8F5mfJxK+9rQq07gRiSjQ==}
     dev: true
 
   /@types/parse-json/4.0.0:
